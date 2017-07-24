@@ -1,0 +1,11 @@
+
+<app-button-tax (buttonClicked)="clickRecivedFromSon($event)" [calculation] = "firstIva"></app-button-tax>
+<br>
+
+<app-button-tax (buttonClicked)="clickRecivedFromSon($event)" [calculation] = "secondIva"></app-button-tax>
+
+<ul *ngFor="let item of valor">
+    <li >The {{item.article}} costs {{item.price | currency:'USD':true:'4.2-2'}} </li>
+    <li >The VAT is {{item.iva}}</li>
+    <li >The total is: {{ item.total | currency:'USD':true:'4.2-2'}} </li>
+</ul>
